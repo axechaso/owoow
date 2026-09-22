@@ -19,6 +19,8 @@ public static class WinFormsUtil
     internal static int GetSelectedIndex(this TabControl tc) =>
         tc.InvokeRequired ? tc.Invoke(() => tc.SelectedIndex) : tc.SelectedIndex;
 
+    internal static DataGridViewColumn? GetColumnFromColumnName(this DataGridView dgv, string header) => dgv.InvokeRequired ? dgv.Invoke(() => dgv.Columns[header]) : dgv.Columns[header];
+
     extension(char c)
     {
         internal bool IsHex(bool allowHexPrefix = false) => char.IsBetween(c, '0', '9') || char.IsBetween(c, 'a', 'f') || char.IsBetween(c, 'A', 'F') || (allowHexPrefix && c is 'x' or 'X');

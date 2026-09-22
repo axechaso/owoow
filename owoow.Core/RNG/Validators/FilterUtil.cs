@@ -65,4 +65,42 @@ public static class FilterUtil
         38 => RibbonIndex.MarkSlump,
         _ => RibbonIndex.MAX_COUNT + 1, // Ignore
     };
+
+    public static string GetRibbonTitle(RibbonIndex rib) => rib switch
+    {
+        RibbonIndex.MarkUncommon => "不怕人的",
+        RibbonIndex.MarkLunchtime => "肚子饿扁了的\n想睡觉的\n开始犯困的\n很早就醒来的",
+        RibbonIndex.MarkCloudy => "盯着云看的\n在雨中哽咽的\n对打雷大呼小叫的\n在雪里打滚的\n冻得发抖的\n喉咙干渴的\n满身沙子的\n对雾感到困惑的",
+        RibbonIndex.MarkFishing => "刚钓上来活蹦乱跳的",
+        RibbonIndex.MarkRare => "没见过人类的",
+        RibbonIndex.MarkRowdy => "脾气暴躁的",
+        RibbonIndex.MarkAbsentMinded => "脑袋空空的",
+        RibbonIndex.MarkJittery => "心跳不已的",
+        RibbonIndex.MarkExcited => "兴奋期待的",
+        RibbonIndex.MarkCharismatic => "感觉到气场的",
+        RibbonIndex.MarkCalmness => "酷酷的",
+        RibbonIndex.MarkIntense => "好斗的",
+        RibbonIndex.MarkZonedOut => "在发呆的",
+        RibbonIndex.MarkJoyful => "看起来很幸福的",
+        RibbonIndex.MarkAngry => "气呼呼的",
+        RibbonIndex.MarkSmiley => "笑眯眯的",
+        RibbonIndex.MarkTeary => "泪汪汪的",
+        RibbonIndex.MarkUpbeat => "心情好的",
+        RibbonIndex.MarkPeeved => "心情不好的",
+        RibbonIndex.MarkIntellectual => "聪慧的",
+        RibbonIndex.MarkFerocious => "狂暴的",
+        RibbonIndex.MarkCrafty => "伺机而动的",
+        RibbonIndex.MarkScowling => "粗犷的",
+        RibbonIndex.MarkKindly => "温柔的",
+        RibbonIndex.MarkFlustered => "慌慌张张的",
+        RibbonIndex.MarkPumpedUp => "充满干劲的",
+        RibbonIndex.MarkZeroEnergy => "毫无干劲的",
+        RibbonIndex.MarkPrideful => "嚣张跋扈的",
+        RibbonIndex.MarkUnsure => "缺乏自信的",
+        RibbonIndex.MarkHumble => "朴素的",
+        RibbonIndex.MarkThorny => "装模作样的",
+        RibbonIndex.MarkVigor => "精力充沛的",
+        RibbonIndex.MarkSlump => "看似疲惫的",
+        _ => string.Empty
+    };
 }
